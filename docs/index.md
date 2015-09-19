@@ -1,4 +1,4 @@
-![drawing](img/logo_nobg.png)
+![logo](img/logo_nobg.png)
 
 # Introduction
 Welcome to the bluz docs!

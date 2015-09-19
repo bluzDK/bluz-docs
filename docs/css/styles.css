@@ -7,6 +7,9 @@ img {
     background-color: rgba(255, 0, 0, 0) !important;
     border: 0px solid #ddd !important;
 }
-img[alt=drawing] {
+img[alt=logo] {
     width: 300px;
+}
+img[alt=hero] {
+    width: 500px;
 }
