@@ -1,0 +1,8 @@
+site_name: Bluz Docs
+pages:
+- Home: index.md
+- Tutorials: tutorials.md
+- Reference: reference.md
+- Troubleshooting: troubleshoot.md
+site_favicon: http://bluz.io/static/img/bluz_only_logo.png
+theme: spacelab
