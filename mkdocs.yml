@@ -7,6 +7,7 @@ pages:
   - 'Cloud Functions': reference/cloud.md
   - 'Input/Output': reference/io.md
   - 'Serial': reference/serial.md
+  - 'System': reference/system.md
 - Hardware:
   - 'Bluz DK': hardware/dk.md
   - 'CR2032 Battery Shield': hardware/battery.md
