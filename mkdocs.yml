@@ -1,8 +1,15 @@
 site_name: Bluz Docs
+site_favicon: http://bluz.io/static/img/bluz_only_logo.png
 pages:
 - Home: index.md
 - Tutorials: tutorials.md
-- Reference: reference.md
+- Reference:
+  - 'Cloud Functions': reference/cloud.md
+  - 'Input/Output': reference/io.md
+  - 'Serial': reference/serial.md
+- Hardware:
+  - 'Bluz DK': hardware/dk.md
+  - 'CR2032 Battery Shield': hardware/battery.md
 - Troubleshooting: troubleshoot.md
-site_favicon: http://bluz.io/static/img/bluz_only_logo.png
-theme: spacelab
+extra_css:
+    - css/styles.css

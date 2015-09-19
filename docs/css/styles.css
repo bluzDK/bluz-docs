@@ -1,0 +1,12 @@
+body {
+    background: transparent !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+img {
+    background-color: rgba(255, 0, 0, 0) !important;
+    border: 0px solid #ddd !important;
+}
+img[alt=drawing] {
+    width: 300px;
+}

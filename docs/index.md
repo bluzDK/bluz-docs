@@ -1,6 +1,4 @@
-<p align="center" >
-<img src="http://bluz.io/static/img/logo.png" img-responsive width="300" alt="" title="GoGlove">
-</p>
+![drawing](img/logo_nobg.png)
 
 # Introduction
 Welcome to the bluz docs!
