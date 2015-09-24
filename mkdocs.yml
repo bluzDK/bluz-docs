@@ -2,7 +2,8 @@ site_name: Bluz Docs
 site_favicon: http://bluz.io/static/img/bluz_only_logo.png
 pages:
 - Home: index.md
-- Tutorials: tutorials.md
+- Tutorials:
+  - 'Getting Started': tutorials/getting_started.md
 - Reference:
   - 'Cloud Functions': reference/cloud.md
   - 'Input/Output': reference/io.md
