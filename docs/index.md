@@ -18,6 +18,16 @@ As always, there are plently of places to find help beyond the documentation.
 * [Hackster](https://www.hackster.io/bluz): Check out what people are building with bluz, or get some great ideas for your own projects.
 * [Blog](http://blog.bluz.io/): All our latest updates and thoughts on bluz and IoT in general.
 
+#So, what is bluz?
+Bluz is a development kit that acts like an Arduino, but has Bluetooth LE (BLE) communication built-in. With this BLE connection, the device can talk to
+the Particle cloud, a service that allows you to access your hardware anywhere in the world through a REST API. You can call functions, get variables, publish
+or subscribe to events, trigger webhooks, and even program it over the air through a Web IDE.
+
+Bluz is perfect for wireless applications that require long battery life. Becuase it uses BLE, bluz can last for months or years on a coin cell battery,
+all while staying connected to the cloud and fully accessible.
+
+Bluz is programmed with Wiring, the same language used in Arduino, so it will feel familiar to many compatible development kits.
+
 # One more thing...
 There is one concept we felt deserved enough attention to put on the front page. Many of you know the classic blank sketch for all Arduino boards.
 

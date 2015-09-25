@@ -46,7 +46,7 @@ For this tutorial, you will need:
 
 
 3. If the LED changes to magenta, this means the cloud connection was unsuccessful. Please see the TroubleShooting guide.
-4. If the LED starts to flash red, this is called an SOS sequence. It will flash quickly three times ('S'), slowly three times ('O'), and then quickly three times again ('S'). This will then be followed by a series of flashes which you can count to get the specific error code. The SOS sequence will repeat twice and bluz will then reboot. You can refer to the trobleshooting guide for information about your specific error code.
+4. If the LED starts to flash red, this is called an SOS sequence. It will flash quickly three times ('S'), slowly three times ('O'), and then quickly three times again ('S'). If you experience this, you can look to the [Troubleshooting guide](../troubleshooting/sos.md) for more help.
 
 
 
