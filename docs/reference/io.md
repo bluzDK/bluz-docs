@@ -138,7 +138,7 @@ void setup()
 void loop()
 {
   val = analogRead(analogPin); // read the input pin
-  analogWrite(ledPin, val/16); // analogRead values go from 0 to 4095,
+  analogWrite(ledPin, val/16); // analogRead values go from 0 to 10223,
                                // analogWrite values from 0 to 255.
   delay(10);
 }
@@ -158,16 +158,16 @@ When used with these pins, the analogWrite function has nothing to do with the a
 
 ## analogRead()
 
-Reads the value from the specified analog pin. The device has 8 channels (A0 to A7) with a 12-bit resolution. This means that it will map input voltages between 0 and 3.3 volts into integer values between 0 and 4095. This yields a resolution between readings of: 3.3 volts / 4096 units or, 0.0008 volts (0.8 mV) per unit.
+Reads the value from the specified analog pin. The device has 6 channels (A0 to A5) with a 10-bit resolution. This means that it will map input voltages between 0 and 3.3 volts into integer values between 0 and 1024. This yields a resolution between readings of: 3.3 volts / 1024 units or, 0.0032 volts (3.2 mV) per unit.
 
 ```C++
 // SYNTAX
 analogRead(pin);
 ```
 
-`analogRead()` takes one argument `pin`: the number of the analog input pin to read from ('A0 to A7'.)
+`analogRead()` takes one argument `pin`: the number of the analog input pin to read from ('A0 to A5'.)
 
-`analogRead()` returns an integer value ranging from 0 to 4095.
+`analogRead()` returns an integer value ranging from 0 to 1023.
 
 ```C++
 // EXAMPLE USAGE
@@ -183,7 +183,7 @@ void setup()
 void loop()
 {
   val = analogRead(analogPin);  // read the input pin
-  analogWrite(ledPin, val/16);  // analogRead values go from 0 to 4095, analogWrite values from 0 to 255
+  analogWrite(ledPin, val/16);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
   delay(10);
 }
 ```
