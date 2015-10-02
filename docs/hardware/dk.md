@@ -11,18 +11,6 @@ And, of course, it contains the Bluetooth LE radio and stack, giving bluz it's p
 ##Pinout
 ![Bluz DK](/img/bluz_pinout.png)
 
-The above diagram shows the pinouts for bluz. Bluz is meant to have the same footprint as the Core/Photon, therefore it can be used with existing shields and accessories.
-However, there are a few notable exceptions:
-
-* A6 and A7 cannot read analog data even though they are still labeled A6 and A7 (which was done for compatible code). There simple weren't enough ADC pins on the nrf51.
-* The pin between RST and GND is used here for SWD programming. On the Photon, this is VBAT while on the Core it is 3.3V*.
-* PWM is not limited to specific pins, however it can only be enabled on 4 at a time.
-* The RGB LED does not "breathe", it blinks. There simple aren't enough PWM capable pins (there would have only been one left for the user).
-* While the defaults for SPI, UART, and I2C are the same as the Core/Photon, they can be reconfigured to any pins.
-* Total current draw across all pins should not exceed 15mA.
-* There is no USB connector, all programming must be done wirelessly, or alternatively through UART, and the device must be powered directly to the pins.
-
-
 ##Tech Specs
 <p>Hardware</p>
 <ul>
@@ -60,5 +48,19 @@ However, there are a few notable exceptions:
     <li>Remote programmable through Spark Cloud</li>
     <li>Control via REST API</li>
 </ul>
+
+##Differences between bluz and the Core/Photon
+
+Bluz is meant to have the same footprint as the Core/Photon, therefore it can be used with existing shields and accessories.
+However, there are a few notable differences:
+
+* A6 and A7 cannot read analog data even though they are still labeled A6 and A7 (which was done for compatible code). There simple weren't enough ADC pins on the nrf51.
+* The pin between RST and GND is used here for SWD programming. On the Photon, this is VBAT while on the Core it is 3.3V*.
+* PWM is not limited to specific pins, however it can only be enabled on 4 at a time.
+* The RGB LED does not "breathe", it blinks. There simple aren't enough PWM capable pins (there would have only been one left for the user).
+* While the defaults for SPI, UART, and I2C are the same as the Core/Photon, they can be reconfigured to any pins.
+* Total current draw across all pins should not exceed 15mA.
+* There is no USB connector, all programming must be done wirelessly, or alternatively through UART, and the device must be powered directly to the pins.
+
 
 
