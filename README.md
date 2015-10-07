@@ -8,4 +8,4 @@ Bluz is a Development Kit (DK) that implements the Wiring language and talks to 
 
 These files have been made available online through a [Creative Commons Attribution-ShareAlike 3.0](http://creativecommons.org/licenses/by-sa/3.0/) license.
 
-These are the documentation files which are built with [MkDocs](http://www.mkdocs.org/).
+These are the documentation files which are built with [MkDocs](http://www.mkdocs.org/). The files here are automatically built and pushed to S3 on upon commits.
