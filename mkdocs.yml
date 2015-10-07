@@ -12,6 +12,7 @@ pages:
   - 'Serial': reference/serial.md
   - 'SPI': reference/spi.md
   - 'System': reference/system.md
+  - 'RGB': reference/rgb.md
 - Hardware:
   - 'Bluz DK': hardware/dk.md
   - 'CR2032 Battery Shield': hardware/battery.md
