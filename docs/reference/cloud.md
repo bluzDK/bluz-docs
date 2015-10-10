@@ -1,6 +1,6 @@
 # Cloud Functions
 
-## Spark.variable()
+## Particle.variable()
 
 Expose a *variable* through the Cloud so that it can be called with `GET /v1/devices/{DEVICE_ID}/{VARIABLE}`.
 Returns a success value - `true` when the variable was registered.
