@@ -9,6 +9,7 @@ pages:
   - 'Bluetooth LE': reference/ble.md
   - 'Cloud Functions': reference/cloud.md
   - 'Input/Output': reference/io.md
+  - 'Interrupts': reference/interrupts.md
   - 'Serial': reference/serial.md
   - 'SPI': reference/spi.md
   - 'System': reference/system.md
