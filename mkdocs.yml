@@ -5,6 +5,7 @@ pages:
 - Tutorials:
   - 'Getting Started': tutorials/getting_started.md
   - 'Operating States': tutorials/states.md
+  - 'Talking Serial': tutorials/serial.md
 - Reference:
   - 'Bluetooth LE': reference/ble.md
   - 'Cloud Functions': reference/cloud.md
