@@ -24,7 +24,7 @@ Using an FTDI breakout is the simplest as the hardware is designed to convert UA
 5. Hook RX of the FTDI breakout to TX of bluz
 6. **OPTIONAL**: Hook 3.3V of the FTDI breakout to 3V3 of bluz (this is only necessary if you don't have a power supply and your FTDI breakout can provide 3.3V)
 7. Follow the instructions for installing drivers for your FTDI breakout board via their documentation
-8. In your bluz sketch, include the .begin() line in your setup() function, then use Serial.println or other commands from the Serial Reference to output values:
+8. In your bluz sketch, include the .begin() line in your setup() function, then use Serial.println or other commands from the [Serial Reference](../reference/serial.md) to output values:
 ```
 // SYNTAX
 Serial1.begin(38400);
