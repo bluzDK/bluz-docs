@@ -12,6 +12,8 @@ For this tutorial, you will need:
 
 Using an FTDI breakout is the simplest as the hardware is designed to convert UART to USB. However, if one isn't available, a Photon/Core (or really any 3.3V microcontroller with a USB Serial port) can be used as they contain the proper hardware.
 
+In most Arduino sketches and examples, Serial is used to send output directly to the USB port. On bluz, however, there is no built-in Serial port so Serial is not used. Serial1 needs to be used, which refers to the TX/RX pins. This is to keep compatibility and proper naming convention with most Arudino boards and clones.
+
 ##FTDI Breakout
 **NOTE:** Please ensure that your breakout is running at 3.3V and not 5V, some boards have the option of running either through setting jumpers or other means, so please make sure you are running in 3.3V mode or you can damage bluz.
 
