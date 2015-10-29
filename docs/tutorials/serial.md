@@ -46,7 +46,7 @@ Using a Photon/Core to convert UART to USB is perfectly valid if you don't have 
 5. Hook RX of the Photon breakout to TX of bluz
 6. Hook 3V3 of the Photon to 3V3 ox bluz
 7. Load the sketch at the bottom of this page onto the Photon (adjust bit rates if necessary)
-8. Install the driver for the Photon if using Windows, or setup your Mac or Linux machine to work with the Photon over USB per []these instructions](https://docs.particle.io/guide/getting-started/connect/photon/)
+8. Install the driver for the Photon if using Windows, or setup your Mac or Linux machine to work with the Photon over USB per [these instructions](https://docs.particle.io/guide/getting-started/connect/photon/)
 9. Power on the Photon and allow it to connect to the cloud
 10. Connect to the Photon through a terminal application, such as CoolTerm or Hyperterminal
 10. Power on bluz and you should see the Serial output
