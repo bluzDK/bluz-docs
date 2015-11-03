@@ -46,3 +46,12 @@ void loop()
 ```
 **Note:**
 The parameter for millis is an unsigned long, errors may be generated if a programmer tries to do math with other datatypes such as ints.
+
+## micros()
+
+Returns the number of microseconds since the device began running. This number will overflow (go back to zero), after approximately 512 seconds.
+
+`unsigned long time = micros();`
+
+**Note:**
+To preserve low power consumption, this uses the 32,768kHz LFCLK to keep track of microseconds, meaning resolution is reduced. Each tick of the clock is approximately 30 microseconds, so greater resolution than that cannot be obtained.
