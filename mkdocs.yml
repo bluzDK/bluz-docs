@@ -13,6 +13,7 @@ pages:
   - 'Interrupts': reference/interrupts.md
   - 'Serial': reference/serial.md
   - 'SPI': reference/spi.md
+  - 'TWI/I2C/Wire': reference/wire.md
   - 'System': reference/system.md
   - 'RGB': reference/rgb.md
 - Hardware:

@@ -8,6 +8,8 @@ The hardware SPI pin functions are mapped as follows:
 * `MOSI` => `A5`
 * `SS` => `A2` (default)
 
+**NOTE:** TWI and SPI cannot be enabled on bluz at the same time. They share resources and attempting to use both can cause conflicts.
+
 ## begin()
 
 Initializes the SPI bus by setting SCK, MOSI, and a user-specified slave-select pin to outputs, MISO to input. SCK and MOSI are pulled low, and slave-select high.
