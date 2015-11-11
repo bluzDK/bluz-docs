@@ -111,6 +111,8 @@ void loop()
 
 Disables interrupts (you can re-enable them with `interrupts()`). Interrupts allow certain important tasks to happen in the background and are enabled by default. Some functions will not work while interrupts are disabled, and incoming communication may be ignored. Interrupts can slightly disrupt the timing of code, however, and may be disabled for particularly critical sections of code.
 
+**NOTE:** The processor in bluz is responsible for both user/system code and the Bluetooth LE radio. As such, the interrupts for the radio cannot be disabled or the wireless connection would be lost. If you need to run time-sensitive code, you may need to schedule it around radio events by registering for radio notifications. See [the following documentation](../reference/ble/#registerradionotifications) for more information.
+
 // SYNTAX
 noInterrupts();
 
