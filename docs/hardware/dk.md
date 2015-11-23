@@ -11,6 +11,18 @@ And, of course, it contains the Bluetooth LE radio and stack, giving bluz it's p
 ##Pinout
 ![Bluz DK](/img/bluz_pinout.png)
 
+##Guide
+![Bluz DK](/img/bluz_DK_guide.png)
+
+The following are the major components on bluz along with their purpose:
+
+- External SPI Flash: Used to store ID, keys, factory reset firmware, and OTA updates when they are downloaded.
+- RGB LED: Used to indicate status codes to the user about the state of the software.
+- Setup Button: Used to enter setup mode in the bootloader. Available to the user in their application.
+- Linear Regulator: 3.7V to 6.0V input to 3.3V output, provides regulated power to the board.
+- Reset Button: Will reboot bluz.
+- nrf51822 Module: Contains the nrf51822 along with the antenna.
+
 ##Tech Specs
 <p>Hardware</p>
 <ul>
