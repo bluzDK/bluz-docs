@@ -49,7 +49,7 @@ The parameter for millis is an unsigned long, errors may be generated if a progr
 
 ## micros()
 
-Returns the number of microseconds since the device began running. This number will overflow (go back to zero), after approximately 512 seconds.
+Returns the number of microseconds since the device began running. This number will overflow (go back to zero), after approximately 36 hours.
 
 `unsigned long time = micros();`
 
