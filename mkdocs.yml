@@ -19,6 +19,7 @@ pages:
 - Hardware:
   - 'Bluz DK': hardware/dk.md
   - 'CR2032 Battery Shield': hardware/battery.md
+  - 'Gateway Shield': hardware/gw_shield.md
 - Troubleshooting:
   - "SOS Codes": troubleshooting/sos.md
 extra_css:

@@ -1,6 +1,6 @@
 #Bluz DK
 
-![hero](/img/new_board.jpg)
+![hero](/img/bluz.jpg)
 
 Bluz DK is the main development board. It contains an ARM Cortex-M0 that runs at 16MHz, 32K Ram, 256K Flash, and a load of hardware peripherals (UART, SPI, I2C, etc.)
 

@@ -1,6 +1,6 @@
 #CR2032 Battery Shield
 
-![hero](/img/new_battery_shield.jpg)
+![hero](/img/battery_shield.jpg)
 
 The battery shield holds a CR2032 battery and can power a bluz DK through the 3V3 pin.
 
