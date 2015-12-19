@@ -1,4 +1,4 @@
-#Bluz DK
+#Gateway Shield
 
 ![hero](/img/gw_shield.jpg)
 
