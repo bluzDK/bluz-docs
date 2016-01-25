@@ -47,7 +47,7 @@ With bluz, there is one addition to this pattern that we want you to learn. You 
 
     void loop() {
         //this, and only this...
-        System.sleep(SLEEP_MODE_DEEP);
+        System.sleep(SLEEP_MODE_CPU);
     }
 
 This pattern will keep your bluz board in the lowest possible power consumption state at all times, while staying connected and available. By removing code from
