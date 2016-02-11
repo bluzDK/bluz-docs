@@ -39,6 +39,17 @@ When bluz is not advertising, by default the RGB LED will blink slowly blue.
 BLE.stopAdvertising();
 ```
 
+## disconnect()
+
+Will disconnect bluz from the central to which it is currently connected.
+
+```C++
+// SYNTAX
+if (Particle.connected() && state == BLE_CONNECTED) {
+    BLE.disconnect();
+}
+```
+
 ## registerRadioNotifications()
 
 Registers a callback function to be called whenever the radio state changes. This can be useful for timing sensitive tasks or ones that need to run when the radio is off. The user can keep track of the times the radio is not active or do things in the gaps.
