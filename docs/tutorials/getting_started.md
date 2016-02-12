@@ -40,11 +40,15 @@ topics to start with:
 If this is your first time setting up a new device, it is recomended you use the bluz app. This will ensure the device is claimed to your account
 and is the most seamless way.
 
-1. If you are using the app to connect, you can download the available iOS and Android apps from bluz from the app store.
-2. Login to the app with your Particle account credentials.
-3. Once bluz is powered on, it will appear in the list of available devices where you can select it to connect bluz to the cloud.
+1. If you are using the app to connect, you can download the available iOS and Android apps from the app store.
+[<img src="/img/app_store_logo.png">](https://itunes.apple.com/us/app/bluz/id1068381227?ls=1&mt=8)
 
-![logo](/img/app_screenshot.png)
+2. Login to the app with your Particle account credentials by clicking the 'Login' button on the top left.
+![logo](/img/ios_app_login.png)
+
+3. The app will scan for 30 seconds. When bluz is powered on during this time, it will appear in the list and you can click Connect
+
+![logo](/img/ios_app.png)
 
 ##Gateway Shield Setup
 
@@ -57,7 +61,7 @@ If this is an existing device on your account, or you know the device ID of your
 5. Once your bluz DK is powered on, it will now automatically connect.
 
 ##Cloud Connection
-1. Once you power bluz on with the gateway turned on, or select it from the app, bluz will start to connect to the cloud. This is indicated by the LED quickly flashing green.
+1. Once you power bluz on with the gateway turned on, or it is selected from the app, bluz will start to connect to the cloud. This is indicated by the LED quickly flashing green.
 
     ![logo](/img/bluz_connecting.gif)
 
@@ -72,7 +76,8 @@ If this is an existing device on your account, or you know the device ID of your
 
 ##Claim your device
 Once your device is connected to the cloud, you need to claim it, which means the device is associated to your account so only you can control it.
-If you are using the bluz app, this will be done automatically and there is nothing further required. If you are using the gateway shield, you
+If you are using the bluz app, approximately 30 seconds after you connect the device ID will display and a Claim button will appear. You can
+click this to claim your device. If you are using the gateway shield, you
 need to claim your device either through the [Particle CLI](https://docs.particle.io/reference/cli/#particle-device-add),
 the [Particle Web IDE](https://build.particle.io/login) (by clicking on the Devices icon and selecting 'Add New Device'),
 or the [REST API](https://docs.particle.io/reference/api/#claim-a-device).
