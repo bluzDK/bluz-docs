@@ -13,9 +13,11 @@ RGB LED Color   | Flashes   |   State
 Green           | Slow      | Advertising and waiting for connection
 Green           | Quick     | Bluetooth LE is connected, attempting to connect to Particle Cloud
 Blue            | Slow      | Bluetooth is off and not advertising
-Magenta         | Quick     | Bluetooth LE is connected, but connection to the Particle cloud has failed
-Magenta         | Slow      | Bluz is receiving an Over the Air update
+Magenta         | Steady    | Bluz is receiving an Over the Air update
+Magenta         | Slow      | Bluz is in Safe Mode, meaning no user app is loaded and running
 Cyan            | Slow      | Bluetooth is connected and bluz is connected to the Particle Cloud
+Yellow          | Solid     | Bluz is in bootloader setup mode
+RED             | Any       | Bluz has errored. Please see the [SOS codes](/troubleshooting/sos/) for further help
 
 ## Advertising State
 

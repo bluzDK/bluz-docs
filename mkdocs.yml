@@ -5,6 +5,7 @@ pages:
 - Tutorials:
   - 'Getting Started': tutorials/getting_started.md
   - 'Operating States': tutorials/states.md
+  - 'Loading Firmware': tutorials/updates.md
   - 'Talking Serial': tutorials/serial.md
   - 'Bootloader Updating': tutorials/bootloader.md
   - 'Building with Bluz': tutorials/custom_hw.md
