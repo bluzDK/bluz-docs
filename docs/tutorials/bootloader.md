@@ -54,7 +54,7 @@ To enter the bootloader setup mode, you must perform the following steps:
 
 ![hero](/img/bootloader_setup.jpg)
 
-Once in safe mode, you can connect with any terminal application. You can use the following commands to get information:
+Once in safe mode, you can connect with any terminal application at 38400 baud rate. You can use the following commands to get information:
 
     f - update firmware
     u - update public key
