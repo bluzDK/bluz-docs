@@ -53,3 +53,10 @@ When you issue an OTA update to your app, it will enter this state. A new firmwa
 ## Connected Mode
 
 In connected mode, bluz can talk to the cloud and the central device, and perform all online activities.
+
+## Safe Mode
+
+Safe Mode is entered automatically when there is an issue detected with the user app or after a Factory Reset. This can happen when moving to
+a new version of firmware as the dependency may have changed, and bluz needs to update its system firmware. To exit Safe Mode, connect bluz
+to the Particle Cloud, if any system updates are needed then it will automatically download them. Once this step is complete, you can flash new
+user app code.
