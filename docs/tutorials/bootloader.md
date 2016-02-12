@@ -37,7 +37,7 @@ To enter the bootloader setup mode, you must perform the following steps:
 5. Continue to hold BTN for approximately 3 seconds until the RGB LED changes to blinking yellow quickly
 5. Continue to hold BTN for approximately 7 more seconds until the RGB LED changes to blinking white quickly
 6. Release BTN. The RGB LED will turn blue while new firmware is copied. Do not power off bluz during this time
-7. After approximately 10-20 seconds, bluz will reboot and start flashing magenta slowly, it is now in Safe Mode and can be
+7. After approximately 10-20 seconds, bluz will reboot and start flashing magenta slowly, it is now in Setup Mode and can be
 connected to the cloud for furhter updates
 
 
@@ -54,7 +54,7 @@ To enter the bootloader setup mode, you must perform the following steps:
 
 ![hero](/img/bootloader_setup.jpg)
 
-Once in safe mode, you can connect with any terminal application at 38400 baud rate. You can use the following commands to get information:
+Once in setup mode, you can connect with any terminal application at 38400 baud rate. You can use the following commands to get information:
 
     f - update firmware
     u - update public key
@@ -71,7 +71,7 @@ and not a .hex or .elf file. These can be built locally from the (firmware repos
 
 To update firmware, you must perform the following steps:
 
-1. Enter Safe Mode as described above
+1. Enter Setup Mode as described above
 2. Run the command:
 
     > python update_fw.py -s [serial port*]
@@ -94,7 +94,7 @@ will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/conn
 
 ###To update the private key on bluz, and subsequently sent the public key to the cloud, you must perform the following steps:
 
-1. Enter Safe Mode as described above
+1. Enter Setup Mode as described above
 2. Run the command:
 
     > particle keys new
@@ -112,12 +112,12 @@ will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/conn
 
 6. The script will prompt you for a filename, enter the name of the file device.der with full path
 7. While the file is being downloaded, the RGB LED will toggle between magenta and blue
-8. Once it is completed downloading, bluz will stay in safe mode. You can now reset the device and connect to the cloud
+8. Once it is completed downloading, bluz will stay in setup mode. You can now reset the device and connect to the cloud
 
 
 ###To update the public key on bluz, you must perform the following steps:
 
-1. Enter Safe Mode as described above
+1. Enter Setup Mode as described above
 2. Run the command:
 
     > python update_private_key.py -s [serial port]
@@ -126,4 +126,4 @@ will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/conn
 
 3. The script will prompt you for a filename, enter the name of the file xyz.pub.pem with full path
 4. While the file is being downloaded, the RGB LED will toggle between magenta and blue
-5. Once it is completed downloading, bluz will stay in safe mode. You can now reset the device and connect to the cloud
+5. Once it is completed downloading, bluz will stay in setup mode. You can now reset the device and connect to the cloud
