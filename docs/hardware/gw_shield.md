@@ -2,11 +2,16 @@
 
 ![hero](/img/gw_shield.jpg)
 
-Bluz DK is the main development board. It contains an ARM Cortex-M0 that runs at 16MHz, 32K Ram, 256K Flash, and a load of hardware peripherals (UART, SPI, I2C, etc.)
+The bluz gateway shield is one of the special features of bluz. By pairing the shield with a Particle Photon or Electron (not provided),
+you can give bluz access to the cloud at all times using WiFi or cellular as the back-end connection. It is basically a
+bridge from Bluetooth LE to the internet. This allows you to place the most power-hungry portion of your deployment in
+a central location with a constant power source, then place many battery powered bluz boards wherever you may need.
 
-Bluz is also outfitted with 2Mb (256KB) external SPI flash. This is used to store backup firmware, system flags, and to download new over the air firmware images.
+The gateway shield works by using an nrf51822 in central mode, allowing up to 8 bluz boards to connect at once. The shield
+then uses SPI to talk to the provided Photon/Electron, which opens the TCP sockets to the Particle cloud.
 
-And, of course, it contains the Bluetooth LE radio and stack, giving bluz it's power-sipping wireless performance.
+The gateway shield can be programmed just like bluz, the nrf51822 central will show up as a separate device class in your
+Particle account. Breakout pins allow you to add sensors or other devices.
 
 ##Guide
 ![Bluz DK](/img/bluz_GatewayShield_guide.png)
