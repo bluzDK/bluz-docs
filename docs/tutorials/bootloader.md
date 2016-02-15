@@ -120,7 +120,7 @@ will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/conn
 1. Enter Setup Mode as described above
 2. Run the command:
 
-    > python update_private_key.py -s [serial port]
+    > python update_public_key.py -s [serial port]
 
     where [serial port] is the port you are using to talk to bluz (either COM on Windows or /dev/tty.xzy... on linux/OS X)
 
