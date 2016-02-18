@@ -51,6 +51,6 @@ With bluz, there is one addition to this pattern that we want you to learn. You 
     }
 
 This pattern will keep your bluz board in the lowest possible power consumption state at all times, while staying connected and available. By removing code from
-your loop, you will let the CPU sleep the maximum amount. Any necessary code, from Spark functions to sensor inputs can be handled through interrupts.
+your loop, you will let the CPU sleep the maximum amount. Any necessary code, from Particle functions to sensor inputs can be handled through interrupts.
 
 Of course, you don't HAVE to do this, you can still run your normal Arduino sketched. We just HIGHLY recommend it to provide maximum battery life for your projects.
