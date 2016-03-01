@@ -97,7 +97,7 @@ will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/conn
 1. Enter Setup Mode as described above
 2. Run the command:
 
-    > particle keys new
+    > particle keys new --protocol tcp
 
 3. Three files will get create, device.der, device.pem and device.pub.pem.
 4. Make sure the CLI is pointed to the cloud you wish bluz to connect to, then run the command:
