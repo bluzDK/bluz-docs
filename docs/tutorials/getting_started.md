@@ -42,6 +42,7 @@ and is the most seamless way.
 
 1. If you are using the app to connect, you can download the available iOS and Android apps from the app store.
 [<img src="/img/app_store_logo.png">](https://itunes.apple.com/us/app/bluz/id1068381227?ls=1&mt=8)
+[<img src="/img/google-play-badge.png">](https://play.google.com/store/apps/details?id=com.banc.sparkle_gateway)
 
 2. Login to the app with your Particle account credentials by clicking the 'Login' button on the top left.
 ![logo](/img/ios_app_login.png)
