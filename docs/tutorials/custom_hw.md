@@ -28,7 +28,7 @@ The MDBT40 module should receive regulated 3.3V to the VCC pin, this can be prov
 ![hero](/img/spi_flash_schematic.png)
 
 Bluz uses external SPI flash to store system flags, backup firmware, and OTA updates. We use the SST25 series from STMicro. This series has
-multiple options with multiple different capacities available. Bluz uses the 2Mbit version, but higher capacity versions can be swapped in if
+multiple options with multiple different capacities available. Bluz uses the 2Mbit (256KByte) version, but higher capacity versions can be swapped in if
 extra flash is required for your application.
 
 ##SWD Interface
