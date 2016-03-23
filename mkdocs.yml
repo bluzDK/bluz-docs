@@ -24,6 +24,7 @@ pages:
   - 'CR2032 Battery Shield': hardware/battery.md
   - 'Gateway Shield': hardware/gw_shield.md
   - 'Gateway': hardware/gw.md
+  - 'UART Shield': hardware/uart_shield.md
   - 'J-Link Shield': hardware/jlink.md
 - Troubleshooting:
   - "SOS Codes": troubleshooting/sos.md
