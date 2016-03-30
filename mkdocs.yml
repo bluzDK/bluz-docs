@@ -1,9 +1,10 @@
 site_name: Bluz Docs
-site_favicon: http://bluz.io/static/img/bluz_only_logo.png
+site_favicon: /img/bluz_only_logo.png
 pages:
 - Home: index.md
 - Tutorials:
   - 'Getting Started': tutorials/getting_started.md
+  - 'Gateway Shield Setup': tutorials/gateway_getting_started.md
   - 'Operating States': tutorials/states.md
   - 'Loading Firmware': tutorials/updates.md
   - 'Talking Serial': tutorials/serial.md

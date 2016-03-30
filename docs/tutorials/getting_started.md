@@ -7,10 +7,7 @@ For this tutorial, you will need:
 - One bluz DK
 - One power source (battery shield, battery, USB line, etc.)
 - A Particle account (if you don't have one, you can sign up [here](https://dashboard.particle.io/login))
-- One of the following:
-    - Bluz Gateway Shield
-    - Bluz Gateway
-    - Bluz app for iOS or Android
+- Bluz app for iOS or Android
 
 ##Particle Account
 Access to the Particle cloud is one of the many advantages of bluz over other Bluetooth LE development kits. This access allows bluz to be controlled
@@ -51,18 +48,8 @@ and is the most seamless way.
 
 ![logo](/img/ios_app.png)
 
-##Gateway Shield Setup
-
-If this is an existing device on your account, or you know the device ID of your bluz device, you can use the gateway shield to connect. 
-
-1. Take a Particle Core or Photon and power it on, connect it to the cloud, and program it with the sketch found [here](https://github.com/bluzDK/bluz-beta/tree/master/gateway/photon-sketch-0.1.0). For more documentation on connecting and programming the Particle devices, please see [here](https://docs.particle.io/guide/getting-started/start/photon/).
-2. Place the programmed Core or Photon into the socket on the gateway shield
-3. Power on the shield by plugging a USB cable into either the Core or Photon, or the USB connector available on the gateway shield
-4. Wait for the Core or Photon to connect to the cloud.
-5. Once your bluz DK is powered on, it will now automatically connect.
-
 ##Cloud Connection
-1. Once you power bluz on with the gateway turned on, or it is selected from the app, bluz will start to connect to the cloud. This is indicated by the LED quickly flashing green.
+1. Once you power bluz and it is selected from the app, bluz will start to connect to the cloud. This is indicated by the LED quickly flashing green.
 
     ![logo](/img/bluz_connecting.gif)
 
@@ -77,11 +64,8 @@ If this is an existing device on your account, or you know the device ID of your
 
 ##Claim your device
 Once your device is connected to the cloud, you need to claim it, which means the device is associated to your account so only you can control it.
-If you are using the bluz app, approximately 30 seconds after you connect the device ID will display and a Claim button will appear. You can
-click this to claim your device. If you are using the gateway shield, you
-need to claim your device either through the [Particle CLI](https://docs.particle.io/reference/cli/#particle-device-add),
-the [Particle Web IDE](https://build.particle.io/login) (by clicking on the Devices icon and selecting 'Add New Device'),
-or the [REST API](https://docs.particle.io/reference/api/#claim-a-device).
+Approximately 30 seconds after you connect the device ID will display and a Claim button will appear. You can
+click this to claim your device.
 
 Once the device is claimed to your account, you will see it in your list of devices and can program it Over the Air.
 
