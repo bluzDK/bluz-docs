@@ -85,14 +85,25 @@ To update firmware, you must perform the following steps:
 
 ##Updating Keys
 Keys are used for encryption between bluz and the Particle cloud. There are two sets of keys, one for the cloud and one for bluz. Each
-set has a public and private portion. There is a set for bluz where bluz has a private key and the cloud as the public version.
-Similrarly, the cloud has a set where the cloud has a private key and bluz has the public key. As long as you are using the public
+set has a public and private key. There is a set for bluz, where bluz has the private key and the cloud has the public key.
+Similarly, the cloud has a set, and the cloud has a private key and bluz has the public key. As long as you are using the public
 Particle cloud, you do not need to update the public key in bluz.
 
-You should only need to update the keys for bluz if you are changing from the public cloud to a separately hosted one. To do this, you
-will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/connect/electron/] installed.
+![hero](/img/keys_diagram.jpg)
 
-###To update the private key on bluz, and subsequently sent the public key to the cloud, you must perform the following steps:
+**NOTE: **You should only need to update the keys for bluz if you are changing from the public cloud to a separately hosted one. You should
+not need to update your keys unless you want to change the cloud you are connecting to.
+
+To update keys, you
+will need the [Particle CLI](https://docs.particle.io/guide/getting-started/connect/electron/) installed.
+
+###Bluz Private Key
+
+Every bluz board has a unique key pair associated with it. The key pair has a public and private key, the private key resides on bluz
+and the cloud must be updated with the public key. Updating these keys key means generating the key pair, flashing the private key to
+the bluz DK, and then sending the public key to the cloud.
+
+To update the private key on bluz, and subsequently sent the public key to the cloud, you must perform the following steps:
 
 1. Enter Setup Mode as described above
 2. Run the command:
@@ -115,7 +126,16 @@ will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/conn
 8. Once it is completed downloading, bluz will stay in setup mode. You can now reset the device and connect to the cloud
 
 
-###To update the public key on bluz, you must perform the following steps:
+###Cloud Public Key
+
+Just as each bluz board has a key pair, the Particle cloud does too. The private key is stored in the cloud and bluz must
+ have the corresponding public key saved. The public key file for the production Particle cloud can be downloaded from
+ [here]( https://s3.amazonaws.com/spark-website/cloud_public.der)
+
+**NOTE: **You should not run these steps with the public key generated from the previous steps. This is not the correct key, you must
+get the public key associated with the instance of the Particle cloud.
+
+To update the public key on bluz, you must perform the following steps:
 
 1. Enter Setup Mode as described above
 2. Run the command:
@@ -124,6 +144,6 @@ will need the (Particle CLI)[https://docs.particle.io/guide/getting-started/conn
 
     where [serial port] is the port you are using to talk to bluz (either COM on Windows or /dev/tty.xzy... on linux/OS X)
 
-3. The script will prompt you for a filename, enter the name of the file xyz.pub.pem with full path
+3. The script will prompt you for a filename, enter the name of the file xyz.pub.pem with full path of the clouds public key file
 4. While the file is being downloaded, the RGB LED will toggle between magenta and blue
 5. Once it is completed downloading, bluz will stay in setup mode. You can now reset the device and connect to the cloud
