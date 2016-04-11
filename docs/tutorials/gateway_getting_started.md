@@ -21,11 +21,20 @@ For this tutorial, you will need:
 
 ##Gateway Shield Setup
 
-1. Take a Particle Core or Photon and power it on, connect it to the cloud, and program it with the sketch found [here](https://github.com/bluzDK/particle-gateway-shield-code).
-2. Place the programmed Core or Photon into the socket on the gateway shield
-3. Power on the shield by plugging a USB cable into either the Core or Photon, or the USB connector available on the gateway shield
-4. Wait for the Core or Photon to connect to the cloud.
-5. Once your bluz DK is powered on, it will now automatically connect.
+1. Take a Particle Core or Photon and power it on and connect it to the cloud. For more information on setting up your Photon, see the [Particle Documentation](https://docs.particle.io/guide/getting-started/start/photon/#connect-your-photon)
+2. Copy or download the sketch found [here](https://github.com/bluzDK/particle-gateway-shield-code). You can copy+paste this into the Web IDE  and flash it to your core, or program the core locally using the CLI
+3. Unplug the USB cable to your Core/Photon and place it into the socket on the gateway shield
+4. Power on the shield by plugging a USB cable into either the Core or Photon, or the USB connector available on the gateway shield
+5. The LED on D7 of the gateway shield will remain off until the Core/Photon is connected (breathing cyan). Once this happens, the LED on D7 for the gateway shield will blink rapidly, indicating it is connecting to the cloud
+6. After approximately 10-15 seconds, the LED on D7 of the gateway shield will blink once every 2 seconds. This indicates the gateway shield is online
+7. To claim the device to your Particle account, visit the [bluz console](http://console.bluz.io/)
+8. Enter your Particle account credentials
+
+    ![hero](/img/console_login_ss.png)
+
+9. After the website searches your devices, it should find the gateway shield and allow you to claim the device
+
+    ![hero](/img/console_claim_ss.png)
 
 ##LED States
 The LED on D7 is the indicator LED for the nrf51822 system and its connection to the cloud. The LED will have several states:
@@ -42,3 +51,7 @@ The following is a list of differences from bluz DK to the gateway shield:
 - Only 1K of RAM is available to the user app
 - The System.sleep(SLEEP_MODE_CPU) is not available or necessary in the user app
 - There is no RGB LED for the nrf51822 on the gateway shield
+
+Further, it is advised that no code be placed in the loop() function. This can block the gateway shield from working properly.
+
+The bluz console can be used to claim gateway shields, update their firmware to the newest version, and program Particle devices to work with them.
