@@ -25,7 +25,7 @@ For this tutorial, you will need:
 2. Copy or download the sketch found [here](https://github.com/bluzDK/particle-gateway-shield-code). You can copy+paste this into the Web IDE  and flash it to your core, or program the core locally using the CLI
 3. Unplug the USB cable to your Core/Photon and place it into the socket on the gateway shield
 4. Power on the shield by plugging a USB cable into either the Core or Photon, or the USB connector available on the gateway shield
-5. The LED on D7 of the gateway shield will remain off until the Core/Photon is connected (breathing cyan). Once this happens, the LED on D7 for the gateway shield will blink rapidly, indicating it is connecting to the cloud
+5. The LED on D7 of the gateway shield will remain off until the Core/Photon is connected (breathing cyan). Once this happens, the LED on D7 for the gateway shield will blink rapidly, indicating it is connecting to the cloud*
 6. After approximately 10-15 seconds, the LED on D7 of the gateway shield will blink once every 2 seconds. This indicates the gateway shield is online
 7. To claim the device to your Particle account, visit the [bluz console](http://console.bluz.io/)
 8. Enter your Particle account credentials
@@ -36,10 +36,20 @@ For this tutorial, you will need:
 
     ![hero](/img/console_claim_ss.png)
 
+
+*NOTE: If the LED on D7 does not start to blink rapidly once the Core/Photon is breathing cyan, please follow these steps:
+
+1. Unplug the Core/Photon from the gateway shield
+2. Plug the Core/Photon into a USB power source and let it power on and get to the breathing cyan state
+3. While still powered, plug the Core/Photon into the gateway shield, being careful to push on the sides of the board and NOT push on the metal shielding
+
+**Some boards shipped with firmware v1.0.47, those shipped before April 18th, 2016, may require these steps to connect. Once you update the firmware
+of the gateway shield, this will no longer be necessary. Follow these steps only if the LED on the gateway shield doesn't act accordingly.**
+
 ##LED States
 The LED on D7 is the indicator LED for the nrf51822 system and its connection to the cloud. The LED will have several states:
-- Blinking quickly: Attempting to connect to the Particle cloud
-- Blinking slowly: Connected to the Particle Cloud
+- Blinking quickly (twice a second): Attempting to connect to the Particle cloud
+- Blinking slowly (once every two seconds): Connected to the Particle Cloud
 
 When an OTA update is initiated, the LED will also blink on/off for each data chunk received, so it will blink somewhat steadily on/off.
 
