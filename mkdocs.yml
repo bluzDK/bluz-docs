@@ -4,7 +4,7 @@ pages:
 - Home: index.md
 - Tutorials:
   - 'Getting Started': tutorials/getting_started.md
-  - 'Gateway Shield Setup': tutorials/gateway_getting_started.md
+  - 'Gateway/Gateway Shield Setup': tutorials/gateway_getting_started.md
   - 'Operating States': tutorials/states.md
   - 'Loading Firmware': tutorials/updates.md
   - 'Talking Serial': tutorials/serial.md
