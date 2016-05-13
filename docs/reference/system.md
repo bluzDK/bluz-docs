@@ -3,12 +3,16 @@
 ## System.sleep()
 
 `System.sleep(SLEEP_MODE_CPU)` can be used to dramatically reduce the power consumption of bluz while remaining connected to any BLE device and the Particle cloud.
-In this particular mode, the device CPU and high frequency clock will turn off. Only the resources needed for enabled peripheral and the BLE radio will be on.
+In this particular mode, the device CPU and high frequency clock will turn off except for interrupts. Only the resources needed for enabled peripheral and the BLE radio will be on.
 The device can be 'awakened' by any interrupt, including Bluetooth LE data becoming available. The device will wake up in the same exact state as it was when it was put in this mode.
 
-As such, it is recommended that sleep be called in the loop() function. This will reduce the running time of the processor and will only awaken bluz when needed.
+In this mode, the system will still wake up every 100mSeconds to perform house-keeping duties. This will also run the loop() function again, so user code
+will still be run 10 times every second with this sleep mode.
 
-This is a slightly different way to configure most Arduino style sketches. However, to get maximize battery life from bluz, it is highly encourages to use interrupts and sleep mode.
+As such, it is recommended that sleep be called in the loop() function. This will reduce the running time of the processor and will only awaken bluz when needed. Any blocking code
+that prevents this from being called as soon as possible (such as delay()) can cause much higher current draw in bluz and will decrease battery performance.
+
+This is a slightly different way to configure most Arduino style sketches. However, to get maximize battery life from bluz, it is highly encouraged to use interrupts and sleep mode.
 
 ```C++
 // SYNTAX
@@ -17,7 +21,9 @@ System.sleep(SLEEP_MODE_CPU);
 
 *Power consumption:*
 
-Power consumption in this mode is highly dependent on the peripherals enabled. No peripheral will be disabled by calling this command, and some peripherals (notably UART) can draw a fair amount of current. To acheive maximum battery life, you can disable unused peripherals before entering this state.
+Power consumption in this mode is highly dependent on the peripherals enabled by the user. No peripheral will be disabled by calling this
+command, and some peripherals (notably UART) can draw a fair amount of current. To achieve maximum battery life, you can disable unused
+peripherals that you may have enabled before entering this state.
 
 ## millis()
 

@@ -46,11 +46,18 @@ With bluz, there is one addition to this pattern that we want you to learn. You 
     }
 
     void loop() {
-        //this, and only this...
         System.sleep(SLEEP_MODE_CPU);
+
+        //non-blocking code goes here
     }
 
-This pattern will keep your bluz board in the lowest possible power consumption state at all times, while staying connected and available. By removing code from
-your loop, you will let the CPU sleep the maximum amount. Any necessary code, from Particle functions to sensor inputs can be handled through interrupts.
+This pattern will keep your bluz board in the lowest possible power consumption state at all times, while staying connected and available. It works by
+shutting off the CPU and high frequency clock, except to handle BLE events or system interrupts. In this state, the system will still wake up every
+100mSeconds, driven by a timer interrupt, to perform house-keeping duties such as turning the LED on/off. This will also run the main loop() function,
+so even with this line of code, your loop() will run 10 times every second.
+
+Your sketch should ultimately try to remove any blocking code from the loop() that would prevent entering this sleep mode. Code like delay() or
+while(waitingForEvent) { } loops will cause the CPU to stay on and more power will be consumed. Try moving necessary code into interrupts and only
+check flags or timing in the loop(), this will greatly increase your battery performance.
 
 Of course, you don't HAVE to do this, you can still run your normal Arduino sketched. We just HIGHLY recommend it to provide maximum battery life for your projects.
