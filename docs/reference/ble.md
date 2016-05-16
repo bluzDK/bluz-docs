@@ -64,3 +64,38 @@ void radioCallbackHandler(bool radio_active) {
 
 BLE.registerNotifications(radioCallbackHandler);
 ```
+
+## sendData()
+
+This will use the custom data service to send data directly to the gateway. The gateway can be an app (bluz provided or custom) or any one of the hardware devices available.
+
+Data will be sent under the custom data service, meaning there will be a one-byte header of 0x04 added to the data when this function is called. The gateway will need to use this header to determine how to use the data.
+
+For more information, you can see our tutorial on [local communication](../tutorials/local_communication.md).
+
+
+```C++
+// Send a three byte array of data
+uint8_t data[3] = {0x01, 0x02, 0x03};
+BLE.sendData(data, sizeof(data));
+
+BLE.registerNotifications(radioCallbackHandler);
+```
+
+## registerDataCallback()
+
+This will register a function that will be called when data is sent to bluz over local communication.
+
+Data can be sent locally from a gateway by using the custom data service. The data received by this function does not include the one-byte header, it will have been stripped away when routing.
+
+For more information, you can see our tutorial on [local communication](../tutorials/local_communication.md).
+
+**NOTE:** This is an interrupt handler and code in the callback function should not block.
+
+```C++
+void dataCallbackHandler(uint8_t *data, uint16_t length) {
+    //do something with the data
+}
+
+BLE.registerDataCallback(dataCallbackHandler);
+```

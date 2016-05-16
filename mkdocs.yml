@@ -8,6 +8,7 @@ pages:
   - 'Operating States': tutorials/states.md
   - 'Loading Firmware': tutorials/updates.md
   - 'Talking Serial': tutorials/serial.md
+  - 'Local Communication': tutorials/local_communication.md
   - 'Bootloader Updating': tutorials/bootloader.md
   - 'Building with Bluz': tutorials/custom_hw.md
 - Reference:
