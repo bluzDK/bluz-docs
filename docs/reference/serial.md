@@ -4,11 +4,9 @@ Used for communication between the device and a computer or other devices. The d
 
 `Serial1:` This channel is available via the device's TX and RX pins.
 
-`Serial2:` This channel is optionally available via the device's D1(TX) and D0(RX) pins. To use Serial2, add `#include "Serial2/Serial2.h"` near the top of your app's main code file.
-
 **NOTE:** 'Serial' is not available. On the Core/Photon, and Arduino Uno and many other compatible boards, this pipes to a virtual port that goes to the USB connector. Since bluz doesn't have a USB connector, we are sticking with convention and not using this.
 
-To use the TX/RX (Serial1) or D1/D0 (Serial2) pins to communicate with your personal computer, you will need an additional USB-to-serial adapter. To use them to communicate with an external TTL serial device, connect the TX pin to your device's RX pin, the RX to your device's TX pin, and the ground of bluz to your device's ground.
+To use the TX/RX (Serial1) pins to communicate with your personal computer, you will need an additional USB-to-serial adapter. To use them to communicate with an external TTL serial device, connect the TX pin to your device's RX pin, the RX to your device's TX pin, and the ground of bluz to your device's ground.
 
 **NOTE:** Please take into account that the voltage levels on these pins runs at 0V to 3.3V and should not be connected directly to a computer's RS232 serial port which operates at +/- 12V and can damage bluz.
 
@@ -20,7 +18,6 @@ Sets the data rate in bits per second (baud) for serial data transmission. For c
 ```C++
 // SYNTAX
 Serial1.begin(speed);   // serial via TX and RX pins
-Serial2.begin(speed);   // serial via D1(TX) and D0(RX) pins
 ```
 `speed`: parameter that specifies the baud rate *(long)*
 
