@@ -72,7 +72,8 @@ As the gateway has a P1 built-in, there is no need to program the device. Howeve
 of the gateway shield, this will no longer be necessary. Follow these steps only if the LED on the gateway shield doesn't act accordingly.**
 
 ##LED States
-The LED on D7 is the indicator LED for the nrf51822 system and its connection to the cloud. The LED will have several states:
+There is an LED on D7 on the gateway shield, and a corresponding white LED on the gateway that can be seen through the case. This is the
+indicator LED for the nrf51822 system and its connection to the cloud. The LED will have several states:
 - Blinking quickly (twice a second): Attempting to connect to the Particle cloud
 - Blinking slowly (once every two seconds): Connected to the Particle Cloud
 
