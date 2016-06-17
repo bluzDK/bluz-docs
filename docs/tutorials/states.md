@@ -37,7 +37,7 @@ BLE.startAdvertising();
 
 ## Connecting State
 
-When bluz connects to a gateway, it will dy default attempt to connect to the Particle cloud. This state will only last for 40 seconds. Either the connection will be successful, or it will not. Bluz will not drop the Bluetooth LE connection, however, but the state will change and the user can decide what to do next.
+When bluz connects to a gateway, it will by default attempt to connect to the Particle cloud. This state will only last for 40 seconds. Either the connection will be successful, or it will not. Bluz will not drop the Bluetooth LE connection, however, but the state will change and the user can decide what to do next.
 
 ## Non-Advertising state
 
