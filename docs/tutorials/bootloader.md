@@ -28,7 +28,7 @@ can be installed and run on your PC. The scripts for each part can be found here
 The scripts are written in python and require version 2.7 to be installed.
 
 ##Performing a factory reset
-To enter the bootloader setup mode, you must perform the following steps:
+To perform a factory reset, you must perform the following steps:
 
 1. Hold the reset button or power bluz off completely
 2. Press and hold the BTN button
