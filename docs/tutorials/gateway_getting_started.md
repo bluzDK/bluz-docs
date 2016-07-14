@@ -30,11 +30,20 @@ Gateway Shield setup involves programming the Particle device and pairing it wit
 ![logo](/img/gw_shield.png)
 
 1. Take a Particle Core or Photon and power it on and connect it to the cloud. For more information on setting up your Photon, see the [Particle Documentation](https://docs.particle.io/guide/getting-started/start/photon/#connect-your-photon)
-2. Copy or download the sketch found [here](https://github.com/bluzDK/particle-gateway-shield-code). You can copy+paste this into the Web IDE  and flash it to your core, or program the core locally using the CLI
-3. Unplug the USB cable to your Core/Photon and place it into the socket on the gateway shield
-4. Power on the shield by plugging a USB cable into either the Core or Photon, or the USB connector available on the gateway shield
-5. The LED on D7 of the gateway shield will remain off until the Core/Photon is connected (breathing cyan). Once this happens, the LED on D7 for the gateway shield will blink rapidly, indicating it is connecting to the cloud*
-6. After approximately 10-15 seconds, the LED on D7 of the gateway shield will blink once every 2 seconds. This indicates the gateway shield is online
+2. Open the Particle [Web IDE](https://build.particle.io/build) and click on the Libraries tab
+
+    ![logo](/img/ide_libraries.png)
+
+3. In the search box for Community Libraries, type in bluz. Select the BLUZ_GATEWAY library
+4. Select the Use This Example button, it will create an app called Gateway in your IDE
+
+    ![logo](/img/ide_use.png)
+
+5. Make sure your Particle device is selected from the Devices tab, then flash the code to your device and wait for the update to complete
+6. Unplug the USB cable to your Core/Photon and place it into the socket on the gateway shield
+7. Power on the shield by plugging a USB cable into either the Core or Photon, or the USB connector available on the gateway shield
+8. The LED on D7 of the gateway shield will remain off until the Core/Photon is connected (breathing cyan). Once this happens, the LED on D7 for the gateway shield will blink rapidly, indicating it is connecting to the cloud*
+9. After approximately 10-15 seconds, the LED on D7 of the gateway shield will blink once every 2 seconds. This indicates the gateway shield is online
 
 ##Gateway Setup
 
