@@ -35,6 +35,10 @@ Gateway Shield setup involves programming the Particle device and pairing it wit
     ![logo](/img/ide_libraries.png)
 
 3. In the search box for Community Libraries, type in bluz. Select the BLUZ_GATEWAY library
+4. In the editor section, make sure you have selected the gateway.cpp file
+
+    ![hero](/img/ide_example.png)
+
 4. Select the Use This Example button, it will create an app called Gateway in your IDE
 
     ![logo](/img/ide_use.png)
