@@ -16,8 +16,9 @@ Blue            | Slow      | Bluetooth is off and not advertising
 Magenta         | Steady    | Bluz is receiving an Over the Air update
 Magenta         | Slow      | Bluz is in Safe Mode, meaning no user app is loaded and running
 Cyan            | Slow      | Bluetooth is connected and bluz is connected to the Particle Cloud
+White           | Slow      | Bluz is operating in local communications mode, and while connected to a gateway, it is not connected to the cloud
 Yellow          | Solid     | Bluz is in bootloader setup mode
-RED             | Any       | Bluz has errored. Please see the [SOS codes](/troubleshooting/sos/) for further help
+Red             | Any       | Bluz has errored. Please see the [SOS codes](/troubleshooting/sos/) for further help
 
 ## Advertising State
 
