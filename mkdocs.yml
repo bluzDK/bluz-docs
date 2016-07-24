@@ -21,6 +21,7 @@ pages:
   - 'TWI/I2C/Wire': reference/wire.md
   - 'System': reference/system.md
   - 'RGB': reference/rgb.md
+  - 'Bluz Gateway': reference/bluz_gateway.md
 - Hardware:
   - 'Bluz DK': hardware/dk.md
   - 'CR2032 Battery Shield': hardware/battery.md
