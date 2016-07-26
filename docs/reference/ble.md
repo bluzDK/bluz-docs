@@ -67,6 +67,8 @@ BLE.registerNotifications(radioCallbackHandler);
 
 ## sendData()
 
+_Requires v1.1.47 or higher_
+
 This will use the custom data service to send data directly to the gateway. The gateway can be an app (bluz provided or custom) or any one of the hardware devices available.
 
 Data will be sent under the custom data service, meaning there will be a one-byte header of 0x04 added to the data when this function is called. The gateway will need to use this header to determine how to use the data.
@@ -83,6 +85,8 @@ BLE.registerNotifications(radioCallbackHandler);
 ```
 
 ## registerDataCallback()
+
+_Requires v1.1.47 or higher_
 
 This will register a function that will be called when data is sent to bluz over local communication.
 
