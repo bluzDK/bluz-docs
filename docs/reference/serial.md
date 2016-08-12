@@ -1,6 +1,6 @@
 # Serial
 
-Used for communication between the device and a computer or other devices. The device has two serial channels:
+Used for communication between the device and a computer or other devices. The device has one serial channel:
 
 `Serial1:` This channel is available via the device's TX and RX pins.
 
@@ -27,11 +27,7 @@ Serial1.begin(speed);   // serial via TX and RX pins
 // EXAMPLE USAGE
 void setup()
 {
-  Serial.begin(9600);   // open serial over USB
-  // On Windows it will be necessary to implement the following line:
-  // Make sure your Serial Terminal app is closed before powering your device
-  // Now open your Serial Terminal, and hit any key to continue!
-  while(!Serial.available()) SPARK_WLAN_Loop();
+  Serial1.begin(9600);   // open serial over USB
 
   Serial1.begin(9600);  // open serial over TX and RX pins
 
@@ -58,24 +54,17 @@ Get the number of bytes (characters) available for reading from the serial port.
 // EXAMPLE USAGE
 void setup()
 {
-  Serial.begin(9600);
+  Serial1.begin(9600);
   Serial1.begin(9600);
 
 }
 
 void loop()
 {
-  // read from port 0, send to port 1:
-  if (Serial.available())
-  {
-    int inByte = Serial.read();
-    Serial1.write(inByte);
-  }
-  // read from port 1, send to port 0:
+  // read from port 1:
   if (Serial1.available())
   {
     int inByte = Serial1.read();
-    Serial.write(inByte);
   }
 }
 ```
@@ -86,7 +75,6 @@ Returns the next byte (character) of incoming serial data without removing it fr
 
 ```C++
 // SYNTAX
-Serial.peek();
 Serial1.peek();
 ```
 `peek()` returns the first byte of incoming serial data available (or `-1` if no data is available) - *int*
@@ -97,9 +85,9 @@ Writes binary data to the serial port. This data is sent as a byte or series of 
 
 ```C++
 // SYNTAX
-Serial.write(val);
-Serial.write(str);
-Serial.write(buf, len);
+Serial1.write(val);
+Serial1.write(str);
+Serial1.write(buf, len);
 ```
 
 ```C++
@@ -107,14 +95,14 @@ Serial.write(buf, len);
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial1.begin(9600);
 }
 
 void loop()
 {
-  Serial.write(45); // send a byte with the value 45
+  Serial1.write(45); // send a byte with the value 45
 
-  int bytesSent = Serial.write(“hello”); //send the string “hello” and return the length of the string.
+  int bytesSent = Serial1.write(“hello”); //send the string “hello” and return the length of the string.
 }
 ```
 
@@ -134,7 +122,6 @@ Reads incoming serial data.
 
 ```C++
 // SYNTAX
-Serial.read();
 Serial1.read();
 ```
 `read()` returns the first byte of incoming serial data available (or -1 if no data is available) - *int*
@@ -144,18 +131,18 @@ Serial1.read();
 int incomingByte = 0; // for incoming serial data
 
 void setup() {
-  Serial.begin(9600); // opens serial port, sets data rate to 9600 bps
+  Serial1.begin(9600); // opens serial port, sets data rate to 9600 bps
 }
 
 void loop() {
   // send data only when you receive data:
-  if (Serial.available() > 0) {
+  if (Serial1.available() > 0) {
     // read the incoming byte:
-    incomingByte = Serial.read();
+    incomingByte = Serial1.read();
 
     // say what you got:
-    Serial.print("I received: ");
-    Serial.println(incomingByte, DEC);
+    Serial1.print("I received: ");
+    Serial1.println(incomingByte, DEC);
   }
 }
 ```
@@ -163,29 +150,29 @@ void loop() {
 
 Prints data to the serial port as human-readable ASCII text. This command can take many forms. Numbers are printed using an ASCII character for each digit. Floats are similarly printed as ASCII digits, defaulting to two decimal places. Bytes are sent as a single character. Characters and strings are sent as is. For example:
 
-- Serial.print(78) gives "78"
-- Serial.print(1.23456) gives "1.23"
-- Serial.print('N') gives "N"
-- Serial.print("Hello world.") gives "Hello world."
+- Serial1.print(78) gives "78"
+- Serial1.print(1.23456) gives "1.23"
+- Serial1.print('N') gives "N"
+- Serial1.print("Hello world.") gives "Hello world."
 
 An optional second parameter specifies the base (format) to use; permitted values are BIN (binary, or base 2), OCT (octal, or base 8), DEC (decimal, or base 10), HEX (hexadecimal, or base 16). For floating point numbers, this parameter specifies the number of decimal places to use. For example:
 
-- Serial.print(78, BIN) gives "1001110"
-- Serial.print(78, OCT) gives "116"
-- Serial.print(78, DEC) gives "78"
-- Serial.print(78, HEX) gives "4E"
-- Serial.println(1.23456, 0) gives "1"
-- Serial.println(1.23456, 2) gives "1.23"
-- Serial.println(1.23456, 4) gives "1.2346"
+- Serial1.print(78, BIN) gives "1001110"
+- Serial1.print(78, OCT) gives "116"
+- Serial1.print(78, DEC) gives "78"
+- Serial1.print(78, HEX) gives "4E"
+- Serial1.println(1.23456, 0) gives "1"
+- Serial1.println(1.23456, 2) gives "1.23"
+- Serial1.println(1.23456, 4) gives "1.2346"
 
 ## println()
 
-Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). This command takes the same forms as `Serial.print()`.
+Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). This command takes the same forms as `Serial1.print()`.
 
 ```C++
 // SYNTAX
-Serial.println(val);
-Serial.println(val, format);
+Serial1.println(val);
+Serial1.println(val, format);
 ```
 
 *Parameters:*
@@ -204,9 +191,7 @@ int analogValue = 0;    // variable to hold the analog value
 void setup()
 {
   // Make sure your Serial Terminal app is closed before powering your device
-  Serial.begin(9600);
-  // Now open your Serial Terminal, and hit any key to continue!
-  while(!Serial.available()) SPARK_WLAN_Loop();
+  Serial1.begin(9600);
 }
 
 void loop() {
@@ -214,11 +199,11 @@ void loop() {
   analogValue = analogRead(A0);
 
   // print it out in many formats:
-  Serial.println(analogValue);       // print as an ASCII-encoded decimal
-  Serial.println(analogValue, DEC);  // print as an ASCII-encoded decimal
-  Serial.println(analogValue, HEX);  // print as an ASCII-encoded hexadecimal
-  Serial.println(analogValue, OCT);  // print as an ASCII-encoded octal
-  Serial.println(analogValue, BIN);  // print as an ASCII-encoded binary
+  Serial1.println(analogValue);       // print as an ASCII-encoded decimal
+  Serial1.println(analogValue, DEC);  // print as an ASCII-encoded decimal
+  Serial1.println(analogValue, HEX);  // print as an ASCII-encoded hexadecimal
+  Serial1.println(analogValue, OCT);  // print as an ASCII-encoded octal
+  Serial1.println(analogValue, BIN);  // print as an ASCII-encoded binary
 
   // delay 10 milliseconds before the next reading:
   delay(10);
@@ -229,11 +214,10 @@ void loop() {
 
 Waits for the transmission of outgoing serial data to complete.
 
-**NOTE:** Since Serial uses the USB port, `Serial.flush()` is an empty function at this time.
+**NOTE:** Since Serial uses the USB port, `Serial1.flush()` is an empty function at this time.
 
 ```C++
 // SYNTAX
-Serial.flush();
 Serial1.flush();
 ```
 
