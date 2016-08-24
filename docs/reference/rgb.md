@@ -15,13 +15,6 @@ RGB.color(255, 255, 255);
 // wait one second
 delay(1000);
 
-// scales brightness of all three colors, 0-255.
-// the following sets the RGB LED brightness to 25%:
-RGB.brightness(64);
-
-// wait one more second
-delay(1000);
-
 // resume normal operation
 RGB.control(false);
 ```
@@ -57,7 +50,7 @@ RGB.control(false);
 
 ## color(red, green, blue)
 
-Set the color of the RGB with three values, 0 to 255 (0 is off, 255 is maximum brightness for that color).  User must take control of the RGB LED before calling this method.
+Set the color of the RGB with three values, 0 to 255 (0 is off, any other value is on).  User must take control of the RGB LED before calling this method.
 
 ```cpp
 // Set the RGB LED to red
