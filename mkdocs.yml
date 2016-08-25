@@ -20,6 +20,7 @@ pages:
   - 'SPI': reference/spi.md
   - 'TWI/I2C/Wire': reference/wire.md
   - 'System': reference/system.md
+  - 'String': reference/string.md
   - 'RGB': reference/rgb.md
   - 'Bluz Gateway': reference/bluz_gateway.md
 - Hardware:

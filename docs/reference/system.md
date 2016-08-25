@@ -61,3 +61,23 @@ Returns the number of microseconds since the device began running. This number w
 
 **Note:**
 To preserve low power consumption, this uses the 32,768kHz LFCLK to keep track of microseconds, meaning resolution is reduced. Each tick of the clock is approximately 30 microseconds, so greater resolution than that cannot be obtained.
+
+## deviceID()
+
+`System.deviceID()` provides an easy way to extract the device ID of your device. It returns a String object of the device ID, which is used to identify your device.
+
+```cpp
+// EXAMPLE USAGE
+
+void setup()
+{
+  // Make sure your Serial Terminal app is closed before powering your device
+  Serial1.begin(9600);
+
+  String myID = System.deviceID();
+  // Prints out the device ID over Serial
+  Serial1.println(myID);
+}
+
+void loop() {}
+```
