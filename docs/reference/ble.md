@@ -103,3 +103,38 @@ void dataCallbackHandler(uint8_t *data, uint16_t length) {
 
 BLE.registerDataCallback(dataCallbackHandler);
 ```
+
+## setTxPower()
+
+_Requires v2.0.50 or higher_
+
+Set the transmit power of the BLE radio. Value must be one of the following: -30, -20, -16, -12, -8, -4, 0, or 4 dBm. Any other value will be ignored.
+
+Default is 0dBm.
+
+Lower values will result in longer battery life, but will reduce the operating range.
+
+```C++
+void setup()
+{
+    // set the transmit power to -8dBm
+    BLE.setTxPower(-8);
+}
+```
+
+## BLE_ADV_NAME()
+
+_Requires v2.0.50 or higher_
+
+Set the advertisement name. Gateway and Gateway Shields can also be setup to filter on specific advertised names, allowing you to filter connections from gateway to DK.
+
+Max length of name is 24 characters.
+
+```C++
+BLE_ADV_NAME("Test");
+
+void setup()
+{
+
+}
+```
