@@ -8,6 +8,7 @@ pages:
   - 'Operating States': tutorials/states.md
   - 'Loading Firmware': tutorials/updates.md
   - 'Talking Serial': tutorials/serial.md
+  - 'Gateway/DK Interactions': tutorials/gateway_dk_interactions.md
   - 'Local Communication': tutorials/local_communication.md
   - 'Bootloader Updating': tutorials/bootloader.md
   - 'Building with Bluz': tutorials/custom_hw.md
@@ -22,6 +23,9 @@ pages:
   - 'System': reference/system.md
   - 'String': reference/string.md
   - 'RGB': reference/rgb.md
+  - 'EEPROM': reference/eeprom.md
+  - 'Time': reference/time.md
+  - 'Software Timers': reference/timer.md
   - 'Bluz Gateway': reference/bluz_gateway.md
 - Hardware:
   - 'Bluz DK': hardware/dk.md
