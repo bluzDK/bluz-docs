@@ -46,7 +46,7 @@ and is the most seamless way.
 
 3. The app will scan for 30 seconds. When bluz is powered on during this time, it will appear in the list and you can click Connect.
 
-**Note: To make sure your Bluz DK is connecting to your app and not a Bluz Gateway, it is recomended you power off or change the search target for any gateways that are powered on.
+**Note**: To make sure your Bluz DK is connecting to your app and not a Bluz Gateway, it is recomended you power off or change the search target for any gateways that are powered on.
 
 ![logo](/img/ios_app.png)
 
