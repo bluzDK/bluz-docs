@@ -44,7 +44,8 @@ and is the most seamless way.
 2. Login to the app with your Particle account credentials by clicking the 'Login' button on the top left.
 ![logo](/img/ios_app_login.png)
 
-3. The app will scan for 30 seconds. When bluz is powered on during this time, it will appear in the list and you can click Connect
+3. The app will scan for 30 seconds. When bluz is powered on during this time, it will appear in the list and you can click Connect.
+Note: To make sure your Bluz DK is connecting to your app and not a Bluz Gateway, power off your Bluz Gateways (if you have any)
 
 ![logo](/img/ios_app.png)
 
