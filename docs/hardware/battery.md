@@ -28,4 +28,4 @@ with higher current can affect this overall capacity. Even worse, sustained curr
 Ths is all subject to the manufacturer and conditions, but it is wise to keep sustained current to a minimum and pulse as infrequently as possible. Doing so will maximize
 your battery life, whereas violating these guidelines can results in significantly reduced battery performance.
 
-If you need a continusouly high current draw, you may want to look into other battery options to power your bluz DK.
+If you need a continuously high current draw, you may want to look into other battery options to power your bluz DK.
