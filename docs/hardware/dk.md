@@ -67,6 +67,7 @@ Bluz is meant to have the same footprint as the Core/Photon, therefore it can be
 However, there are a few notable differences:
 
 * A6 and A7 cannot read analog data even though they are still labeled A6 and A7 (which was done for compatible code). There simple weren't enough ADC pins on the nrf51.
+* The ADC on bluz is 10-bit, while it is 12-bit on the Photon. This means a value of 0-1023 will be returned instead of 0-4095. This may require code or math changes for libraries or devices that use the ADC.
 * The pin between RST and GND is used here for SWD programming. On the Photon, this is VBAT while on the Core it is 3.3V*.
 * PWM is not limited to specific pins, however it can only be enabled on 4 at a time.
 * The RGB LED does not "breathe", it blinks. There simple aren't enough PWM capable pins (there would have only been one left for the user).
