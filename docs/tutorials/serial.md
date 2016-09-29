@@ -1,6 +1,6 @@
 #Talking Serial to Bluz
 
-This tutorial will walk you through accessing the Serial UART port on bluz. While each bluz board has a built-in UART, there is no USB connector or native support for plugging it into your USB connetor on a PC. Therefore, you must convert from the TX/RX pins to USB if you wish to use the UART for viewing output on your PC.
+This tutorial will walk you through accessing the Serial UART port on bluz. While each bluz board has a built-in UART, there is no USB connector or native support for plugging it into your USB connector on a PC. Therefore, you must convert from the TX/RX pins to USB if you wish to use the UART for viewing output on your PC.
 
 For this tutorial, you will need:
 
@@ -13,7 +13,7 @@ For this tutorial, you will need:
 
 Using an FTDI breakout is the simplest as the hardware is designed to convert UART to USB. However, if one isn't available, a Photon/Core (or really any 3.3V microcontroller with a USB Serial port) can be used as they contain the proper hardware.
 
-In most Arduino sketches and examples, Serial is used to send output directly to the USB port. On bluz, however, there is no built-in Serial port so Serial is not used. Serial1 needs to be used, which refers to the TX/RX pins. This is to keep compatibility and proper naming convention with most Arudino boards and clones.
+In most Arduino sketches and examples, Serial is used to send output directly to the USB port. On bluz, however, there is no built-in Serial port so Serial is not used. Serial1 needs to be used, which refers to the TX/RX pins. This is to keep compatibility and proper naming convention with most Arduino boards and clones.
 
 ##UART Shield
 The bluz UART shield comes with its own FTDI breakout and compatible shield. More details can be found in the [hardware reference.](../hardware/uart_shield.md)
