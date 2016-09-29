@@ -38,7 +38,7 @@ To perform a factory reset, you must perform the following steps:
 5. Continue to hold BTN for approximately 7 more seconds until the RGB LED changes to blinking white quickly
 6. Release BTN. The RGB LED will turn blue while new firmware is copied. Do not power off bluz during this time
 7. After approximately 10-20 seconds, bluz will reboot and start flashing magenta slowly, it is now in Setup Mode and can be
-connected to the cloud for furhter updates
+connected to the cloud for further updates
 
 
 ##Entering Bootloader Setup Mode
