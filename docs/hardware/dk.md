@@ -70,7 +70,7 @@ However, there are a few notable differences:
 * The ADC on bluz is 10-bit, while it is 12-bit on the Photon. This means a value of 0-1023 will be returned instead of 0-4095. This may require code or math changes for libraries or devices that use the ADC.
 * The pin between RST and GND is used here for SWD programming. On the Photon, this is VBAT while on the Core it is 3.3V*.
 * PWM is not limited to specific pins, however it can only be enabled on 4 at a time.
-* The RGB LED does not "breathe", it blinks. There simple aren't enough PWM capable pins (there would have only been one left for the user).
+* The RGB LED does not "breathe", it blinks. There simply aren't enough PWM capable pins (there would have only been one left for the user).
 * While the defaults for SPI, UART, and I2C are the same as the Core/Photon, they can be reconfigured to any pins.
 * Total current draw across all pins should not exceed 15mA.
 * There is no USB connector, all programming must be done wirelessly, or alternatively through UART, and the device must be powered directly to the pins.
