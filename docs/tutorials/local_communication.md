@@ -45,7 +45,6 @@ void handle_gateway_event(uint8_t event, uint8_t *data, uint16_t length) {
                 } else {
                     online_devices +="X ";
                     gateway.send_peripheral_data(i, rsp, 2);
-                    bluz_peripherals_available++;
                 }
             }
             Particle.publish("Bluz Devices Online", online_devices);
