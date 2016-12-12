@@ -11,10 +11,10 @@ Please note that in all states, the setup() and loop() functions will be called.
 RGB LED Color   | Flashes   |   State
 ---             | ---       | ---
 Green           | Slow      | Advertising and waiting for connection
-Green           | Quick     | Bluetooth LE is connected, attempting to connect to Particle Cloud
+Green           | Fast      | Bluetooth LE is connected, attempting to connect to Particle Cloud
 Blue            | Slow      | Bluetooth is off and not advertising
 Magenta         | Steady    | Bluz is receiving an Over the Air update
-Magenta         | Slow      | Bluz is in Safe Mode, meaning no user app is loaded and running
+Yellow          | Slow/Fast | Bluz is in Safe Mode, meaning no user app is loaded and running. When slow, it is advertising or connected, when fast it is connecting
 Cyan            | Slow      | Bluetooth is connected and bluz is connected to the Particle Cloud
 White           | Slow      | Bluz is operating in local communications mode, and while connected to a gateway, it is not connected to the cloud
 Yellow          | Solid     | Bluz is in bootloader setup mode
