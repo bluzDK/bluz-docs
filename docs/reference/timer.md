@@ -32,12 +32,10 @@ The timer callback is similar to an interrupt - it shouldn't block. However, it 
 
 - `period` is the period of the timer in milliseconds  (unsigned int)
 - `callback` is the callback function which gets called when the timer expires.
-- `one_shot` (optional, since 0.4.9) when `true`, the timer is fired once and then stopped automatically.  The default is `false` - a repeating timer.
+- `one_shot` (optional) when `true`, the timer is fired once and then stopped automatically.  The default is `false` - a repeating timer.
 
 
 ### Class member callbacks
-
-_Since 0.4.9_
 
 A class member function can be used as a callback using this syntax to create the timer:
 
@@ -46,7 +44,7 @@ A class member function can be used as a callback using this syntax to create th
 - `period` is the period of the timer in milliseconds  (unsigned int)
 - `callback` is the class member function which gets called when the timer expires.
 - `instance` the instance of the class to call the callback function on.
-- `one_shot` (optional, since 0.4.9) when `true`, the timer is fired once and then stopped automatically.  The default is `false` - a repeating timer.
+- `one_shot` (optional) when `true`, the timer is fired once and then stopped automatically.  The default is `false` - a repeating timer.
 
 
 ```
@@ -151,8 +149,6 @@ timer.dispose(); // stop and delete timer from timer list.
 ```
 
 ### isActive()
-
-_Since 0.5.0_
 
 `bool isActive()`
 

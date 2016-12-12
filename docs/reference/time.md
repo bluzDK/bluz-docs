@@ -250,8 +250,6 @@ Serial1.print(Time.timeStr()); // Wed May 21 01:08:47 2014
 
 Returns: String
 
-_NB: In 0.3.4 and earlier, this function included a newline at the end of the returned string. This has been removed in 0.4.0._
-
 ## format()
 
 Formats a time string using a configurable format.
