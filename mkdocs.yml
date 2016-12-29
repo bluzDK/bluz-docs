@@ -27,6 +27,7 @@ pages:
   - 'Time': reference/time.md
   - 'Software Timers': reference/timer.md
   - 'Servo': reference/servo.md
+  - 'Beacon': reference/beacon.md
   - 'Bluz Gateway': reference/bluz_gateway.md
 - Hardware:
   - 'Bluz DK': hardware/dk.md
