@@ -28,3 +28,18 @@ The advertising packet will include the major, minor, and UUID specified, as wel
     }
 ```
 
+## eddystone_url_beacon(char *url)
+
+Starts advertising as an Eddystone beacon with the specified URL, allowing Physical Web enabled apps to read and display it to the user.
+
+The advertising packet will include the URL as well as the Tx Power of the device. The Tx Power will be adjusted based on the power set from BLE.setTxPower()
+
+`url` is the URL to be displayed to the Physical Web enabled application. The value will be parsed, so the prefix (e.g. http:// or http://www.) will convert to a one-byte code. The remainder of the URL must be 17 characters or less, values longer will be truncated
+
+
+```C++
+    void setup() {
+        BLE.eddystone_url_beacon("http://bluz.io");
+    }
+```
+
