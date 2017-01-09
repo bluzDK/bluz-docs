@@ -4,6 +4,8 @@ _Requires v2.2.50 or higher_
 
 This library allows you to turn bluz into various beacon types that can be used to trigger apps and other devices when they come into proximity.
 
+**NOTE:** When bluz is configured as a beacon, it wil not automatically connect to bluz hardware gateways. The only way to get the device back online for reprogramming is through the iOS/Android app
+
 ## beacon(uint32_t major, uint32_t minor, uint8_t *UUID)
 
 Starts advertising as a beacon with a major, minor, and UUID. This will put bluz into a state that is similar to popular beacon protocols used by major smartphone manufacturers
