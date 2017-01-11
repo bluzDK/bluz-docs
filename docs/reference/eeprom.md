@@ -18,8 +18,7 @@ Returns the total number of bytes available in the emulated EEPROM.
 size_t length = EEPROM.length();
 ```
 
-- The Core has 127 bytes of emulated EEPROM.
-- The Photon and Electron have 2047 bytes of emulated EEPROM.
+- Bluz has 512 bytes of storage
 
 ## put()
 This function will write an object to the EEPROM. You can write single values like `int` and
