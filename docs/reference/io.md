@@ -158,7 +158,7 @@ When used with these pins, the analogWrite function has nothing to do with the a
 
 ## analogRead()
 
-Reads the value from the specified analog pin. The device has 6 channels (A0 to A5) with a 10-bit resolution. This means that it will map input voltages between 0 and 3.3 volts into integer values between 0 and 1024. This yields a resolution between readings of: 3.3 volts / 1024 units or, 0.0032 volts (3.2 mV) per unit.
+Reads the value from the specified analog pin. The device has 6 channels (A0 to A5) with a 10-bit resolution. This means that it will map input voltages between 0 and 3.6 volts into integer values between 0 and 1023. This yields a resolution between readings of: 3.6 volts / 1024 units or, 0.0035 volts (3.5 mV) per unit.
 
 ```C++
 // SYNTAX
