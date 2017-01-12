@@ -81,3 +81,18 @@ void setup()
 
 void loop() {}
 ```
+
+## readSupplyVoltage()
+
+Read the level of the supply voltage without requiring any external connections, can be used to check for battery life. Uses the ADC, so returns a value between 0 and 1023 that represents a voltage between 0V and 3.6V.
+
+```cpp
+// EXAMPLE USAGE
+void setup() {}
+
+void loop()
+{
+  double battery_voltage = (readSupplyVoltage() / 1024.0) * 3.6;
+  Spark.publish("Battery Voltage", String(battery_voltage));
+}
+```
