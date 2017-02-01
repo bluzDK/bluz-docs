@@ -122,6 +122,22 @@ void setup()
 }
 ```
 
+## setConnectionParameters(minimum, maximum)
+
+_Requires v2.0.50 or higher_
+
+Set the minimum and maximum connection intervals in milliseconds. These are for bluz DK as the peripheral, the central (gateway) will choose a value between these two, if possible, when the connection is established
+
+Longer connection intervals will result in longer battery life, but will increase latency and decrease throughput. Different gateways will choose different values, so a small window can results in a desired value.
+
+```C++
+void setup()
+{
+    // set the connection interval to allow values between 20mSec and 40mSec
+    BLE.setConnectionParameters(20,40);
+}
+```
+
 ## BLE_ADV_NAME()
 
 _Requires v2.0.50 or higher_
