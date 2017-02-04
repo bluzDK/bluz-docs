@@ -12,6 +12,7 @@ pages:
   - 'Local Communication': tutorials/local_communication.md
   - 'Bootloader Updating': tutorials/bootloader.md
   - 'Building with Bluz': tutorials/custom_hw.md
+  - 'Low Power Optimizations': tutorials/low_power.md
 - Reference:
   - 'Bluetooth LE': reference/ble.md
   - 'Beacon': reference/beacon.md
