@@ -142,5 +142,29 @@ properly. You want to make sure your device will have enough range, but keeping 
 If your use case requires the gateway and bluz boards to be in the same room, or even adjacent rooms, it could be beneficial to turn down
 the transmit power.
 
+###Connection Interval
+One of the largest effects on the battery is how often the BLE Radio transmits, this is defined by the connection interval.
+
+![large](/img/connection_interval.png)
+
+The Bluetooth LE central and peripheral need to sync themselves from time to time to share data. The connection interval is the time between these
+  events, and it is crucial in battery performance. The radios must wake up each conection interval.
+
+No data can be shared between the central and peripheral until a connection interval, so it has a high impact on throughput and latency. Keeping
+the value low is beneficial if those are major considerations. If, however, throughput and latency are not major priorities, it is better to
+keep the connection interval high, thereby reducing the amoung of time the radio is transmitting and increasing battery life.
+
+It is important to understand how connection parameters are set. When a central (gateway) connects to a perihperal (bluz DK), the connection
+interval is negotiated. First, bluz DK will suggest times to the gateway. The gateway can then specify the exact connection interval, either inside
+this suggestedboundary or not. So the gateway is the device that sets it, not bluz DK.
+
+Every central can set this differently. For example, iPhones don't have much control over this value, it is buried in the stack. On the Nordic
+SDK, however, the value can be specified. So the bluz gateways can be told which values to chose.
+
+To specify the suggested settings on bluz DK, you can use the [setConnectionParameters](../reference/ble.md#setconnectionparametersminimum-maximum)
+command. This will specify what bluz DK will suggest to the gateway when it connects.
+
+
+
 
 

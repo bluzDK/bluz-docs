@@ -13,3 +13,6 @@ img[alt=logo] {
 img[alt=hero] {
     width: 500px;
 }
+img[alt=large] {
+    width: 700px;
+}
