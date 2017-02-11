@@ -82,3 +82,19 @@ void setup() {
     gateway.register_gateway_event(handle_gateway_event);
 }
 ```
+
+## set_connection_parameters()
+
+Set the minimum and maximum connection intervals in milliseconds. The central will choose a value between these two points for the connection interval when a peripheral connects
+
+Longer connection intervals will result in longer battery life, but will increase latency and decrease throughput.
+
+```C++
+// SYNTAX
+bluz_gateway gateway;
+
+void setup() {
+     gateway.init();
+     gateway.set_connection_parameters(275,300);
+}
+```
