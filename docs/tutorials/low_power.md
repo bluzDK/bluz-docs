@@ -11,7 +11,7 @@ There are several major pieces that determine how much current bluz will draw, t
 
 This tutorial will explain how to maximize battery life from bluz through careful settings of parameters and code optimization.
 
-##RGD LED
+##RGB LED
 This one is pretty straight forward: the longer the RGB LED stays on the more power it draws. In normal operation, the RGB LED blinks
 100mSec every 1 second, so it will consume a fair amount of power pretty quickly. Simply turning it off will save you a good deal of battery
 capacity:
