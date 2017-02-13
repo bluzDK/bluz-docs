@@ -84,6 +84,8 @@ void loop() {}
 
 ## readSupplyVoltage()
 
+_Requires v2.2.50 or higher_
+
 Read the level of the supply voltage without requiring any external connections, can be used to check for battery life. Uses the ADC, so returns a value between 0 and 1023 that represents a voltage between 0V and 3.6V.
 
 ```cpp
