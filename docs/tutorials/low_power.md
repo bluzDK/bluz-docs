@@ -1,14 +1,27 @@
 #Low Power Optimizations
 
-One of the major advantages of bluz is its low power Bluetooth LO radio. This allows bluz to run with much lower power consumption than
+One of the major advantages of bluz is its low power Bluetooth LE radio. This allows bluz to run with much lower power consumption than
 a WiFi board, but to get the best possible battery life bluz will require a little tweaking of the parameters.
 
 There are several major pieces that determine how much current bluz will draw, they are:
 
+- The RGB LED
 - The BLE radio
 - The CPU
 
 This tutorial will explain how to maximize battery life from bluz through careful settings of parameters and code optimization.
+
+##RGD LED
+This one is pretty straight forward: the longer the RGB LED stays on the more power it draws. In normal operation, the RGB LED blinks
+100mSec every 1 second, so it will consume a fair amount of power pretty quickly. Simply turning it off will save you a good deal of battery
+capacity:
+
+```
+void setup() {
+    RGB.control(true);
+    RGB.color(0, 0, 0);
+}
+```
 
 ##CPU
 There are two major ways to reduce the time the CPU is active, through Sleep Mode and Peripherals control
@@ -140,7 +153,7 @@ As RF propogation is fully dependent on surroundings, it is important to test ou
 properly. You want to make sure your device will have enough range, but keeping the transmit power too high will simply decrease battery life.
 
 If your use case requires the gateway and bluz boards to be in the same room, or even adjacent rooms, it could be beneficial to turn down
-the transmit power.
+the transmit power. You can use the bluz apps for iOS and Android to measure the RSSI from the device in you environment.
 
 ###Connection Interval
 One of the largest effects on the battery is how often the BLE Radio transmits, this is defined by the connection interval.
@@ -148,21 +161,37 @@ One of the largest effects on the battery is how often the BLE Radio transmits, 
 ![large](/img/connection_interval.png)
 
 The Bluetooth LE central and peripheral need to sync themselves from time to time to share data. The connection interval is the time between these
-  events, and it is crucial in battery performance. The radios must wake up each conection interval.
+  events, and it is crucial in battery performance. The radios must wake up each connection interval.
 
 No data can be shared between the central and peripheral until a connection interval, so it has a high impact on throughput and latency. Keeping
 the value low is beneficial if those are major considerations. If, however, throughput and latency are not major priorities, it is better to
-keep the connection interval high, thereby reducing the amoung of time the radio is transmitting and increasing battery life.
+keep the connection interval high, thereby reducing the amount of time the radio is transmitting and increasing battery life.
 
-It is important to understand how connection parameters are set. When a central (gateway) connects to a perihperal (bluz DK), the connection
-interval is negotiated. First, bluz DK will suggest times to the gateway. The gateway can then specify the exact connection interval, either inside
-this suggestedboundary or not. So the gateway is the device that sets it, not bluz DK.
+It is important to understand how connection parameters are set. When a central (gateway) connects to a peripheral (bluz DK), the connection
+interval is negotiated. First, bluz DK will suggest times to the gateway. The gateway will then specify the exact connection interval, either inside
+this suggested boundary or not. So the gateway is the device that sets it, not bluz DK.
 
-Every central can set this differently. For example, iPhones don't have much control over this value, it is buried in the stack. On the Nordic
+Every central can set this differently. For example, iPhones don't allow the programmer control over this value, it is buried in the stack. On the Nordic
 SDK, however, the value can be specified. So the bluz gateways can be told which values to chose.
 
 To specify the suggested settings on bluz DK, you can use the [setConnectionParameters](../reference/ble.md#setconnectionparametersminimum-maximum)
 command. This will specify what bluz DK will suggest to the gateway when it connects.
+
+Specifying the connection parameters on the bluz DK side are not enough if you are using a bluz gateway. Luckily, it is easy to set them on the
+bluz Gateway as well, this is part of the code you flash to the Photon/Electron/P1 that is on-board. The function to do this is
+[set_connection_parameters](../reference/bluz_gateway.md#set_connection_parameters).
+
+In general, if you are using bluz gateways, you only need to set it on the gateway side. If, however, you are using a different gateway
+(Raspberry Pi, iPhone/Android, Mac, etc.) then it is recommended to set the desired connection intervals on bluz DK.
+
+##Conclusion
+This tutorial covers a lot of material that you can use to increase battery life on bluz DK. Out of the box, a lot of these optimizations aren't
+used to create a better user experience (it would be a little hard to tell what is happening for new users if the RGB LED was off!).
+
+Once you are comfortable with bluz and the different states, it is good to play around with all these settings so you can get the highest possible
+battery life from bluz. After all, that's why we made it!
+
+
 
 
 
