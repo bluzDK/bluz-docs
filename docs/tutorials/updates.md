@@ -17,7 +17,7 @@ The bluz firmware consists of 4 major parts. They each reside in the internal fl
 1. The Nordic SoftDevice is the BLE Stack provided as a binary file from Nordic Semiconductor. This runs the BLE radio on-board.
 2. The System Firmware. This contains all the code that makes bluz run on Particle, act like an Arduino, and generally run. This is
 a separate binary file that gets created from the build system and flashed down.
-3. The User App. This is where the code the user generates lives. When you right a sketch with the setup() and loop() functions, it builds a
+3. The User App. This is where the code the user generates lives. When you write a sketch with the setup() and loop() functions, it builds a
 separate  binary from this code that links to the system firmware at runtime.
 4. The Bootloader. This is what performs copies of system updates, and also handles Setup Mode. The bootloader will make sure everything looks
 right in the system before handing control over to the system firmware.
