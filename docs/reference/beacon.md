@@ -41,7 +41,7 @@ The advertising packet will include the URL as well as the Tx Power of the devic
 
 ```C++
     void setup() {
-        BLE.eddystone_url_beacon("http://bluz.io");
+        BLE.eddystone_url_beacon("https://bluz.io");
     }
 ```
 
