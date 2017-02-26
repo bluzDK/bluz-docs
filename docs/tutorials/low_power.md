@@ -45,7 +45,7 @@ Optimized code will instead check time flags to perform tasks on specified inter
 a lot of power while it is running:
 
 ```
-loop() {
+void loop() {
     //BAD! delaying 5 seconds like this means the CPU isn't in sleep mode!!
     delay(5000);
     Particle.publish("Send Event");
@@ -60,7 +60,7 @@ However, this code will maximize the time the CPU is asleep and perform the same
 int timeLastPublish = 0;
 int timeBetweenPublishes = 5000;
 
-loop() {
+void loop() {
     //if it is time to send the event, send it!
     if (millis() - timeLastPublish > timeBetweenPublishes) {
         Particle.publish("Send Event");
@@ -79,7 +79,7 @@ Alternatively, you can use Software Timers to do the same thing:
 bool publish = false;
 Timer timer(5000, processTimer);
 
-loop() {
+void loop() {
     //when the timer triggers, send the event
     if (publish) {
         Particle.publish("Send Event");
