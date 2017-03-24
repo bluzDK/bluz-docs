@@ -115,7 +115,7 @@ Notice also that we have configured D6 as an input that, if pulled HIGH during s
 Once you have flashed the code to both boards, turn on the gateway shield and let it connect. Then turn on your bluz DK with the above sketch, it will connect automatically and once it is online, you will start to the see the events published.
 
 ##Electron Use
-This method is especially effective for use with the Electron as you are charged monthly for the data used. A bluz DK in normal Autoamtic mode can consume up to 6MB per month even if no data is sent, this is because keep-alives are sent in the background to the cloud. Local comunication mitigates this issue.
+This method is especially effective for use with the Electron as you are charged monthly for the data used. A bluz DK in normal Automatic mode can consume up to 6MB per month even if no data is sent, this is because keep-alives are sent in the background to the cloud. Local comunication mitigates this issue.
 
 You can also turn off the gateway from connecting to the cloud by placing this line in your Particle sketch:
 
