@@ -67,7 +67,7 @@ Note that to update the firmware or keys, you should follow the instructions bel
 
 ##Updating Firmware
 You can flash any module built portion of the bluz firmware, including system and user parts. The file must be a .bin file,
-and not a .hex or .elf file. These can be built locally from the (firmware repository)[https://github.com/bluzDK/bluzDK-firmware].
+and not a .hex or .elf file. These can be built locally from the [firmware repository](https://github.com/bluzDK/bluzDK-firmware).
 
 To update firmware, you must perform the following steps:
 
