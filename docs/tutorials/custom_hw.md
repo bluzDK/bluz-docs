@@ -9,7 +9,6 @@ and buttons, and want to minimize your design.
 The other option is to include only the necessary parts of bluz into your design. The two main pieces that are required are the MDBT40 module
 and the external SPI flash. There are also a number of components required to support those two pieces.
 
-
 ##MDBT40
 ![hero](/img/mdbt40_schematic.png)
 
@@ -33,8 +32,19 @@ extra flash is required for your application.
 
 ##SWD Interface
 The nrf51822 in bluz uses a two-pin version of JTAG called Single Wire Debug, or SWD. This can be used to completely erase and reprogram the
-nrf51. It si recomended that you break out the SWCLK and SWDIO pins and leave them accessible. You should also break out the VCC and GND pins
-as they are required for the programmer. Leaving these pins available allows you to debug code or change firmware during manufacturing.
+nrf51, which is required on the manufacturing line for testing, programming and provisioning.. You should break out the SWCLK and SWDIO pins
+and leave them accessible. You should also break out the VCC and GND pins as they are required for the programmer.
+
+##UART Peripheral
+While not fully required, it is also recomended to break out the TX/RX pins so they are accessible. The bluz provisioning and programming scripts
+can use these pins for feedback during programming on the manufacturing line. If they are not proeset, it will not be possible to fully automate
+the programming/provisioning process, so it is highly recomnded to leave the exposed and available for quick connection.
 
 ##Optional Components
 All other components, such as the buttons, LDO, and RGB LED are optional.
+
+##Provisioning
+Once your hardware is built, it will need to be provisioned for the Particle cloud. This process creates and device ID, adds it to the Particle
+database along with the public key, and the flashes the board with the latest bluz DK firmware. You can use the
+[bluz Command Line Interface](https://github.com/bluzDK/bluz-cli/blob/master/README.md) to program your devices. This process requires an API
+Key, which needs to be obtained from bluz. You can contact us at hello@bluz.io to request a key and purchase credits for programming boards.
