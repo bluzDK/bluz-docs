@@ -32,13 +32,13 @@ extra flash is required for your application.
 
 ##SWD Interface
 The nrf51822 in bluz uses a two-pin version of JTAG called Single Wire Debug, or SWD. This can be used to completely erase and reprogram the
-nrf51, which is required on the manufacturing line for testing, programming and provisioning.. You should break out the SWCLK and SWDIO pins
+nrf51, which is required on the manufacturing line for testing, programming and provisioning. You should break out the SWCLK and SWDIO pins
 and leave them accessible. You should also break out the VCC and GND pins as they are required for the programmer.
 
 ##UART Peripheral
 While not fully required, it is also recomended to break out the TX/RX pins so they are accessible. The bluz provisioning and programming scripts
 can use these pins for feedback during programming on the manufacturing line. If they are not proeset, it will not be possible to fully automate
-the programming/provisioning process, so it is highly recomnded to leave the exposed and available for quick connection.
+the programming/provisioning process, so it is highly recomnded to leave them exposed and available for quick connection.
 
 ##Optional Components
 All other components, such as the buttons, LDO, and RGB LED are optional.
