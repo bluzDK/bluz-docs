@@ -128,7 +128,7 @@ Serial1.read();
 
 ```C++
 // EXAMPLE USAGE
-int incomingByte = 0; // for incoming serial data
+uint8_t incomingByte = 0; // for incoming serial data
 
 void setup() {
   Serial1.begin(9600); // opens serial port, sets data rate to 9600 bps
