@@ -154,3 +154,19 @@ void setup()
 
 }
 ```
+
+## setAdvertisingInterval(interval)
+
+_Requires v2.3.50 or higher_
+
+Set the advertising interval in milliseconds. Longer intervals equate to better battery life, but possibly longer connection times.
+
+Not available if using Beacon advertising.
+
+```C++
+void setup()
+{
+    // set the advertising interval to 2 seconds
+    BLE.setAdvertisingInterval(2000);
+}
+```
