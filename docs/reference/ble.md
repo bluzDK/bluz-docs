@@ -170,3 +170,17 @@ void setup()
     BLE.setAdvertisingInterval(2000);
 }
 ```
+
+## getRSSI()
+
+_Requires v2.3.50 or higher_
+
+Get the received signal strength from the last connection event.
+
+```C++
+void setup()
+{
+    // get the RSSI
+    int rssi = BLE.getRSSI();
+}
+```
