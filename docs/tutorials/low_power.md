@@ -155,8 +155,17 @@ properly. You want to make sure your device will have enough range, but keeping 
 If your use case requires the gateway and bluz boards to be in the same room, or even adjacent rooms, it could be beneficial to turn down
 the transmit power. You can use the bluz apps for iOS and Android to measure the RSSI from the device in you environment.
 
+###Advertising Interval
+When bluz is not connected, it is advertising, meaning it is sending out small packets at pre-defined intervals for others to discover.
+These intervals can be set, and the longer they are, the less frequently the radio is used. While bluz isn't normally in the non-connected
+state, this can happen at unexpected times, such as a gateway losing power or moving out of range. Therefore, it is a good idea to set this
+parameter to a higher value.
+
+This can be specified via the [setadvertisingintervalinterval](../reference/ble.md#setadvertisingintervalinterval) function. A value in the
+1-2 second range will be efficient, but it could take longer for a DK to connect to a central. 
+
 ###Connection Interval
-One of the largest effects on the battery is how often the BLE Radio transmits, this is defined by the connection interval.
+One of the largest effects on the battery is how often the BLE Radio transmits when connected, this is defined by the connection interval.
 
 ![large](/img/connection_interval.png)
 
