@@ -12,7 +12,7 @@ and the external SPI flash. There are also a number of components required to su
 ##MDBT40
 ![hero](/img/mdbt40_schematic.png)
 
-The MDBT40 contains the nrf51822, antenna, and many necessary components for the device to run. THe module only needs the following components
+The MDBT40 contains the nrf51822, antenna, and many necessary components for the device to run. The module only needs the following components
 as well to operate:
 
 - A 0.1 uF capacitor between VCC and GND as close to the VDD pin as possible
