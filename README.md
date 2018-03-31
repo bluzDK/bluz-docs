@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/bluzDK/bluz-docs.svg?style=svg)](https://circleci.com/gh/bluzDK/bluz-docs)
+
 <p align="center" >
 <img src="http://bluz.io/static/img/logo.png" alt="" title="">
 </p>
