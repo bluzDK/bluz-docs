@@ -1,3 +1,6 @@
+virtualenv env
+source env/bin/activate
+
 sudo apt-get update
 sudo apt-get install -y python-pip
 sudo apt-get install -y python-dev

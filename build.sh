@@ -1,3 +1,5 @@
+source env/bin/activate
+
 mkdocs build
 sudo rm -r docs
 rm mkdocs.yml
