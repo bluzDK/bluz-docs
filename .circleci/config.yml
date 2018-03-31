@@ -45,7 +45,7 @@ jobs:
       - run:
           name: deploy staging docs
           command: |
-            aws s3 sync ./ s3://docs.bluz.io --delete --region us-east-1
+            aws s3 sync ./ s3://docs.bluz.io --delete --region us-west-2
 
 workflows:
   version: 2
